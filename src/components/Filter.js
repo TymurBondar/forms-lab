@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filter({ onCategoryChange, handleTextFilter: onSearchChange, search }) {
+function Filter({ onCategoryChange, onSearchChange, search }) {
   return (
     <div className="Filter">
       <input onChange={onSearchChange} value={search} type="text" name="search" placeholder="Search..." />

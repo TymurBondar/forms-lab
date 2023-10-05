@@ -15,7 +15,7 @@ function ShoppingList({ items }) {
     setSelectedCategory(event.target.value);
   }
 
-  function handleTextFilter(event){
+  function onSearchChange(event){
     setNameFilter(event.target.value);
   }
 
@@ -51,7 +51,7 @@ function ShoppingList({ items }) {
       addNewProductCategory={addNewProductCategory}
       addNewProuctName={addNewProductName}
       onItemFormSubmit={onItemFormSubmit}/>
-      <Filter onCategoryChange={handleCategoryChange} handleTextFilter={handleTextFilter} search={nameFilter} />
+      <Filter onCategoryChange={handleCategoryChange} onSearchChange={onSearchChange} search={nameFilter} />
       <ul className="Items">
         {itemsToDisplay.map((item) => (
           <Item key={item.id} name={item.name} category={item.category} />
